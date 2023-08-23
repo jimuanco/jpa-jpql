@@ -14,6 +14,10 @@ public class Order {
     private Address address;
 
     @ManyToOne
+    @JoinColumn(name = "MEMBER_ID")
+    private Member member;
+
+    @ManyToOne
     @JoinColumn(name = "PRODUCT_ID")
     private Product product;
 

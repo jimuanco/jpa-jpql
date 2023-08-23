@@ -13,7 +13,8 @@
             <property name="javax.persistence.jdbc.user" value="sa"/>
             <property name="javax.persistence.jdbc.password" value=""/>
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+<!--            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>-->
+            <property name="hibernate.dialect" value="dialect.MyH2Dialect"/>
 
             <!-- 옵션 -->
             <property name="hibernate.show_sql" value="true"/>
@@ -24,6 +25,7 @@
             <!-- 객체 필드 추가 시 alter로 컬럼 추가, 객체 필드 지워도 컬럼 지워지지는 않음 -->
 <!--            <property name="hibernate.hbm2ddl.auto" value="update" />-->
             <!-- 웬만하면 테스트 서버에도 스크립트 직접 짜서 적용하는게 좋음 -->
+            <property name="hibernate.default_batch_fetch_size" value="100" /> <!-- 1000 이하로 -->
         </properties>
     </persistence-unit>
 </persistence>
