@@ -581,7 +581,7 @@ public class JpnMain {
                     .setMaxResults(2)
                     .getResultList();
 
-            System.out.println("result = " + result);
+            System.out.println("result = " + result.size());
 
             for (Team team : result) {
                 System.out.println("team = " + team.getName() + "|members=" + team.getMembers().size());
@@ -701,7 +701,6 @@ public class JpnMain {
         }
 */
 
-/*
         try {
 
             Team teamA = new Team();
@@ -750,7 +749,6 @@ public class JpnMain {
         } finally {
             em.close();
         }
-*/
 
         emf.close();
     }
